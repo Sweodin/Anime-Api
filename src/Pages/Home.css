@@ -1,0 +1,326 @@
+/*----- Body Wrapper -----*/
+
+.body-wrapper {
+    max-width: 1280px;
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-top: 0px;
+    padding: 10px;
+    
+}
+
+/*----- Hero Content -----*/
+
+.hero-content {
+    position: relative;
+    max-width: 647px;
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 60px;
+    
+    
+}
+
+.hero-title {
+    max-width: 562px;
+    min-height: auto;
+    width: 100%;
+    font-family: "Passion One", serif;
+    text-align: left;
+    font-size: 58px;
+    font-weight: 700;
+    background: linear-gradient(to right, #e94560, #533483);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+}
+
+.hero-subtitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: #e94560;
+    margin-top: 10px;
+}
+
+
+/*----- Image -----*/
+
+.anime-image {
+    height: 883px;
+    width: 836px;
+    position: sticky;
+    top: 20px;
+    filter: drop-shadow(0 0 20px rgba(233, 69, 96, 0.2));
+    mask-image: 
+        linear-gradient(to right, 
+            rgba(0,0,0,0),
+            rgba(0,0,0,1) 20%,
+            rgba(0,0,0,1) 80%,
+            rgba(0,0,0,0)
+        ),
+        linear-gradient(to bottom, 
+            rgba(0,0,0,1) 80%, 
+            rgba(0,0,0,0)
+        );
+    -webkit-mask-image: 
+        linear-gradient(to right, 
+            rgba(0,0,0,0),
+            rgba(0,0,0,1) 20%,
+            rgba(0,0,0,1) 80%,
+            rgba(0,0,0,0)
+        ),
+        linear-gradient(to bottom, 
+            rgba(0,0,0,1) 80%, 
+            rgba(0,0,0,0)
+        );
+    -webkit-mask-composite: source-over;
+    mask-composite: intersect;
+}
+
+
+/*----- Search Form Styles -----*/
+
+ .search-section {
+    width: 100%;
+    max-width: 640px;
+    height: 60px;
+    background: rgba(233, 69, 96, 0.1);
+    border: 1px solid rgba(233, 69, 96, 0.3);
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    margin-bottom: 20px;
+ }
+
+
+.search-bar {
+align-self: stretch;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+padding: 0px 0px 0px 7px;
+}
+
+.search-icon {
+    color: white;
+    
+}
+
+ input {
+    width: 633px;
+    height: auto;
+    width: 100%;
+    background-color: inherit;
+    border:none;
+    color:white;
+    padding: 10px;
+    letter-spacing: 1px;
+    font-family: "Oxygen", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+}
+
+
+.searchBtn {
+width: 153px;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+background: linear-gradient(180deg, #e94560, #533483);
+height: 60px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 22px 55px;
+box-sizing: border-box;
+transition: all 0.3s ease;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.searchBtn:hover {
+    background: linear-gradient(180deg, #ff4d6d, #6b44ac);
+    transform: translateY(-2px); 
+}
+
+.searchBtn:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.del-button {
+    position: absolute;
+    top: 10px;
+    right: 17px;
+    z-index: 2;
+    background: rgba(26, 26, 46, 0.8);
+    border: none;
+    color: #e94560;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.del-button:hover {
+    background: rgba(233, 69, 96, 0.2);
+    color: #ff4d6d;
+}
+
+/*----- Answer Box Styles -----*/
+
+
+.answer-box {
+    width: 100%;
+    width: 560px;
+    background: rgba(97, 139, 191, 0.1);
+    border: 1px solid rgba(97, 139, 191, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 80px;
+}
+
+ .answer-box:hover {
+    background: rgba(97, 139, 191, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+} 
+
+.answer-box p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+.click-more {
+    color: #618BBF;
+    font-size: 0.8em;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+/*----- Anime Card Styles -----*/
+
+.anime-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    min-width: 600px;
+    width: 100%;
+    position: relative;
+}
+
+.anime-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.anime-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(26, 26, 46, 0.4);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.anime-info h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #e94560;
+}
+
+.score {
+    color: #ff4d6d;
+    font-size: 1.1rem;
+    
+}
+
+.synopsis {
+    line-height: 1.6;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.genre-tag {
+    background: rgba(233, 69, 96, 0.3);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: #e94560;
+}
+
+
+/*----- Loading State -----*/
+
+.loading {
+    color: #618BBF;
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+/*----- Add media query for responsive design -----*/
+
+@media (max-width: 1200px) {
+    .body-wrapper {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .anime-image {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .hero-content {
+        margin-top: 0;
+    }
+}
+
