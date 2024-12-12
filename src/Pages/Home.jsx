@@ -136,6 +136,40 @@ function Home() {
         fetchGenres();
     }, []);
 
+    /*----- Optimized Image Component -----*/
+    const OptimizedImage = ({ src, alt, className }) => {
+        const [loaded, setLoaded] = useState(false);
+        
+        return (
+            <div className={`image-container ${className}`}>
+                <img
+                    src={src}
+                    alt={alt}
+                    className={`placeholder ${loaded ? 'loaded' : ''}`}
+                    style={{ width: '300px', height: 'auto' }}
+                    loading="lazy"
+                    onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = AnimeImage;
+                    }}
+                />
+                <img
+                    src={src}
+                    alt={alt}
+                    className={`full-image ${loaded ? 'loaded' : ''}`}
+                    onLoad={() => setLoaded(true)}
+                    loading="lazy"
+                    srcSet={`${src} 300w, ${src} 600w, ${src} 900w`}
+                    sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+                    onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = AnimeImage;
+                    }}
+                />
+            </div>
+        );
+    };
+
     /*----- Render Component -----*/
 
     return (
@@ -299,8 +333,8 @@ function Home() {
                                 >
                                     ×
                                 </button>
-                                <img 
-                                    src={selectedAnime.images?.jpg?.image_url || AnimeImage} 
+                                <OptimizedImage 
+                                    src={selectedAnime.images?.jpg?.image_url || AnimeImage}
                                     alt={selectedAnime.title}
                                     className="anime-image"
                                 />

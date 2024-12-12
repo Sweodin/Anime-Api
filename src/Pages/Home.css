@@ -497,6 +497,101 @@ transition: all 0.3s ease;
     will-change: transform, opacity;
 }
 
+/*----- Optimized Image Styles -----*/
+
+.image-container {
+    content-visibility: auto;
+    contain: layout style paint;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    will-change: opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* High-priority images */
+.image-container[data-priority="true"] img {
+    content-visibility: visible;
+}
+
+.full-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.full-image.loaded {
+    opacity: 1;
+}
+
+.placeholder {
+    filter: blur(10px);
+    transition: opacity 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+}
+
+.placeholder.loaded {
+    opacity: 0;
+}
+
+/*----- LCP Optimizations -----*/
+
+/* LCP Optimizations */
+.image-container {
+    content-visibility: auto;
+    contain: layout style paint;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    will-change: opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* High-priority images */
+.image-container[data-priority="true"] img {
+    content-visibility: visible;
+}
+
+.full-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.full-image.loaded {
+    opacity: 1;
+}
+
+.placeholder {
+    filter: blur(10px);
+    transition: opacity 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+}
+
+.placeholder.loaded {
+    opacity: 0;
+}
+
 /*----- Add media query for responsive design -----*/
 
 @media (max-width: 1200px) {
